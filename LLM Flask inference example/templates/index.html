@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BitNet LLM Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #response {
+            white-space: pre-wrap;
+            padding: 10px;
+            border: 1px solid #ddd;
+            min-height: 100px;
+        }
+        .loading {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BitNet LLM Interface</h1>
+        <div>
+            <textarea id="prompt" placeholder="Enter your prompt here..."></textarea>
+        </div>
+        <div>
+            <button onclick="generateResponse()">Generate</button>
+            <span class="loading" id="loading">Processing...</span>
+        </div>
+        <div>
+            <h3>Response:</h3>
+            <div id="response"></div>
+        </div>
+    </div>
+
+    <script>
+        async function generateResponse() {
+            const prompt = document.getElementById('prompt').value;
+            const loading = document.getElementById('loading');
+            const responseDiv = document.getElementById('response');
+
+            if (!prompt) {
+                alert('Please enter a prompt');
+                return;
+            }
+
+            loading.style.display = 'inline';
+            responseDiv.textContent = '';
+
+            try {
+                const response = await fetch('/generate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ prompt }),
+                });
+
+                const data = await response.json();
+                responseDiv.textContent = data.response;
+            } catch (error) {
+                responseDiv.textContent = 'Error: ' + error.message;
+            } finally {
+                loading.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
