@@ -3,7 +3,7 @@
 
 لمشاهدة شرح مفصل وعملي لكافة الخطوات، تفضل بزيارة قناتنا على يوتيوب:
 
-[![شاهد الفيديو](https://img.youtube.com/vi/9kmFfHQ32YI/0.jpg)](https://www.youtube.com/watch?v=9kmFfHQ32YI)
+[![شاهد الفيديو](https://img.youtube.com/vi/4-HJOt53LMw/0.jpg)](https://youtu.be/4-HJOt53LMw)
 
 لا تنسَ الاشتراك في القناة وتفعيل جرس التنبيهات ليصلك كل جديد! ❤️
 
@@ -117,7 +117,7 @@ python run_inference.py -m models/Llama3-8B-1.58-100B-tokens/ggml-model-i2_s.ggu
 
 لمشاهدة شرح مفصل وعملي لكافة الخطوات، تفضل بزيارة قناتنا على يوتيوب:
 
-[![شاهد الفيديو](https://img.youtube.com/vi/9kmFfHQ32YI/0.jpg)](https://www.youtube.com/watch?v=9kmFfHQ32YI)
+[![شاهد الفيديو](https://img.youtube.com/vi/4-HJOt53LMw/0.jpg)](https://youtu.be/4-HJOt53LMw)
 
 لا تنسَ الاشتراك في القناة وتفعيل جرس التنبيهات ليصلك كل جديد! ❤️
 
